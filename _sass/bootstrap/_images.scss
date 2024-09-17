@@ -40,3 +40,9 @@
   @include font-size($figure-caption-font-size);
   color: $figure-caption-color;
 }
+
+.img-cover {
+  width: 100%; /* Make the image cover the full width of its container */
+  height: auto; /* Maintain the aspect ratio */
+  object-fit: cover; /* Ensure the image covers the container without distortion */
+}
