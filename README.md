@@ -1,98 +1,142 @@
-# Academic CSCI Course Page with Jekyll
+# RT2 Lab Website
 
-This is the generic template for making a Computer Science course page at [Hendrix College](http://hendrix.edu). This uses [Jekyll](https://jekyllrb.com/) and [GitHub Pages](https://pages.github.com/) for deployment to the web.
+This website is built with [Jekyll](https://jekyllrb.com/).
 
-Do you have improvements you would like to add? Pull Requests are welcome! Please add any errors, questions, or accessibility issues to the Issues section above.
+## Setup
 
-## Examples
+``` bash
+brew install ruby
+gem install bundler jekyll
+```
 
-Links to all of the Hendrix CSCI courses using this template can be found at [hendrix-cs.github.io](https://hendrix-cs.github.io/).
+Clone this repository, then install the dependencies:
 
-## Deployment
+``` bash
+bundle install
+```
 
-There are just a few steps to creating a new course website from this repository.
+## Run
 
-* Determine the subdirectory you will use for this course. For example, our [CSCI 150 - Foundations of Computer Science](http://hendrix-cs.github.io/csci150) course uses `csci150`.
+Run the local webserver with:
 
-* Use this repository as the [template](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) for making your new repository, named exactly with your chosen subdirectory name. Your repository can be public or private.
+``` bash
+bundle exec jekyll serve
+```
 
-* Edit the `_config.yml` file on line 27, changing the `baseurl` to be your chosen subdirectory, e.g. `/csci150`.
+You can also use the Makefile:
 
-* [Configure the repository](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site) so that is will show up as a GitHub pages website. 
+``` bash
+make install;
+make serve;
+```
 
-Hooray! Your course website should be visible at `https://<username>.github.io/<subdir>`.
+## Contribute
 
-## Content
+### Publications from Zotero
 
-Once your course repository is created and visible on the web, it is time to update the content.
+``` python
+import json
 
-### Background Image
+import pandas as pd
+from unidecode import unidecode
 
-The easiest way to set the jumbotron image is to copy a new image into the `assets/images` directory, and name it `jumbo-background.jpg`. Larger images are better and will be less pixelated on large screens.
+df = pd.read_csv("publications.csv", encoding="utf8")
 
-For a different type of image or to have it named something else, you will need to change the filename in the `.jumbotron` class definitions in the `assets/css/main.css` file so that the src attribute shows your file.
+df = df[[
+    "Item Type",
+    "Publication Year",
+    "Author",
+    "Title",
+    "Short Title",
+    "Publication Title",
+    "DOI",
+    "Url",
+    "Abstract Note",
+    "Date",
+    "Pages",
+    "Issue",
+    "Volume",
+    "Library Catalog"
+]]
 
-### Description, Course Number, Title, and Semester
+df["Author"] = df["Author"].apply(unidecode)
+df["Title"] = df["Title"].apply(unidecode)
+df["Short Title"] = df["Short Title"].fillna("").apply(unidecode)
+df["Abstract Note"] = df["Abstract Note"].fillna("").apply(unidecode)
 
-The `_config.yml` file contains a number of elements that can be edited to customize the course for your content.
+df_json = df.to_dict(orient="records")
 
-First, replace the current `description` with the catalog copy of your course description. *Be sure it is indented to follow the YAML formatting.*
+with open("data_/publications.json", "w") as f:
+    json.dump(df_json, f)
+```
 
-Next, change the course `number` be a human-readable version of the catalog numbering for the course, e.g. `CSCI 150`, and the `semester` to be a human-readable indicator of the semester, e.g `Fall 2019`. These will appear on the webpage in the upper-left portion of the navigation bar.
+### Add a new member
 
-Finally, the `title` for the course should be edited to match the catalog name, e.g. `Foundations of Computer Science`.
+New members are stored as markdown files under [_pages/team/_posts](_pages/team/_posts).
 
-### Navigation Bar
+Each new member `.md` file must look like this:
 
-The `navigation` denotes the links in the top-right of the header on each page. Simple links have a `page` and `url` field, while grouping of links are denoted with a `title` field and a `subfolderitems` list of simple links.
+``` yaml
+---
+layout: member
+category: staff
+title: Name of the member
+image: Image filename, stored in /images
+role: Member role
+permalink: 'team/member-slug'
+social:
+    twitter: https://twitter.com/member
+    linkedin: https://linkedin.com/in/member
+    google-scholar: https://scholar.google.com/citations?user=member-id
+education:
+ - Education 1
+ - Education 2
+---
 
-### Instructors and Offerings
+Write her bio text.
+```
 
-The next section of `_config.yml` defines the `instructors` for the course. An instructor has an `id`,`name`,`email` address,`web` link ,`phone` number, and `officehours` link. This information is displayed either on or near the jumbotron in the main page header.
+### Add a new publication
 
-Now, `offerings` are created, which are given a `name`, and list the room `loc`, the `time` of the offering, and the `instructor` for that offering using their `id` from above.
+Publications are stored as `.yml` file under [_data/publist.yml](_data/publist.yml).
 
-If there is only one offering, we recommend updating the `index.md` document to use the `course-single.md` layout instead of `course-multi.md`. It looks better.
+Just add a new entry to the list like this:
 
-### Resources
+``` yaml
+- title: "Celecoxib With Neoadjuvant Chemotherapy for
+          Breast Cancer Might Worsen Outcomes
+          Differentially by COX-2 Expression and ER Status:
+          Exploratory Analysis of the REMAGUS02 Trial"
+  image:
+  description:
+  authors: Hamy et al.
+  year: 2019
+  journal: Journal of Clinical Oncology
+  link:
+    url: https://www.ncbi.nlm.nih.gov/pubmed/30702971
+    display: Pubmed Link
+```
 
-Resources provided to the students, such as links to software or textbooks, are listed next in the `resources` list. Each resource
-has a `name`, an `image` used for easy visual reference, and a
-`url` for linking to the resource. These can be displayed in a row, with a maximum of four per row, using
-the template found in `_includes\resources.html`.
+### Add news
 
-Additional resources in different categories can be created following the same structure, as shown with the `extra-resources` section being displayed on the `index.md` page with the Optional Resources heading.
+Publications are stored as `.yml` file under [_data/news.yml](_data/news.yml).
 
-### Labs, Homework, and Projects
+An entry looks like the following:
 
-Student assignments such as labs, homeworks, and projects should use the `work.html` layout. It is helpful to organize the labs, homeworks, and projects into their own directories.
+```yaml
+- date: 03/09/19
+  title: "Something great"
+  tags:
+    - some
+    - tags
+  content: Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    Eu turpis egestas pretium aenean. Luctus venenatis lectus magna fringilla
+    urna porttitor. Lorem ipsum dolor sit amet. Pellentesque massa placerat
+    duis ultricies. Commodo viverra maecenas accumsan lacus vel.
+```
 
-The `sample-lab.md` and `sample-project.md` files are good examples of how to use markdown to write an assignment. The frontmatter at the beginning of the page is processed by the layout to display the title and number at the top of the webpage.
+### Edit template
 
-    ---
-    layout: work
-    type: Lab
-    num: 4
-    worktitle: Guess My Number
-    ---
-
-This can be edited for your specific assignment, and augmented to include any information you want as liquid variables within your assignment, such as the due dates in the sample project page.
-
-We have included four [alert](https://getbootstrap.com/docs/4.0/components/alerts/) contexts to help highlight key portions of the assignments. They can be for `warning`, `tip`, `note`, or `important` sections, with their source found in the `_includes` folder, and are included using the following syntax
-
-    {% include important.html content="Make sure your locations are chosen so that
-    the face is always completely visible on the screen." %}
-
-To make any images on your page [responsive](https://getbootstrap.com/docs/5.0/content/images/) for different browser sizes, you can add `{: .img-fluid }` after the image link.
-
-## Customization and Style
-
-This template is set up for Hendrix College courses, and follows the [Style Guide](https://www.hendrix.edu/WorkArea/DownloadAsset.aspx?id=86641) for our college. This section shows how to edit this for different institutions or styles.
-
-### Colors
-
-We use Hendrix Orange `#f5822a` as the main color theme in the header, footer, and links. This is defined, along with a few other colors, as a variable at the top of the `assets/css/main.css` file.
-
-### Fonts
-
-Hendrix uses the [Merriweather Sans](https://fonts.google.com/specimen/Merriweather+Sans) font on webpages. Other fonts can be [swapped out](https://stackoverflow.com/questions/14676613/how-to-import-google-web-font-in-css-file) for your particular instutituional style by changing the `@import` and `font-family` lines.
+We use [Bootstrap](https://getbootstrap.com/) for designing the website. Feel free to modify either the [_pages](_pages/) or the
+[_layouts](_layouts/) components.
