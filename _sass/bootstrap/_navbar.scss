@@ -66,11 +66,11 @@
 
 // Navbar nav
 //
-// Custom navbar navigation (doesn't require `.nav`, but does make use of `.nav-link`).
+// Custom navbar navigation (doesn't require .nav, but does make use of .nav-link).
 
 .navbar-nav {
   display: flex;
-  flex-direction: column; // cannot use `inherit` to get the `.navbar`s value
+  flex-direction: column; // cannot use inherit to get the .navbars value
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
@@ -104,8 +104,8 @@
 // Powered by the collapse Bootstrap JavaScript plugin.
 
 // When collapsed, prevent the toggleable navbar contents from appearing in
-// the default flexbox row orientation. Requires the use of `flex-wrap: wrap`
-// on the `.navbar` parent.
+// the default flexbox row orientation. Requires the use of flex-wrap: wrap
+// on the .navbar parent.
 .navbar-collapse {
   flex-basis: 100%;
   flex-grow: 1;
@@ -140,7 +140,7 @@
   background-size: 100% 100%;
 }
 
-// Generate series of `.navbar-expand-*` responsive classes for configuring
+// Generate series of .navbar-expand-* responsive classes for configuring
 // where your navbar collapses.
 .navbar-expand {
   @each $breakpoint in map-keys($grid-breakpoints) {
@@ -222,23 +222,23 @@
 // Dark links against a light background
 .navbar-light {
   .navbar-brand {
-    color: $navbar-dark-brand-color;
+    color: $navbar-light-brand-color;
 
     @include hover-focus() {
-      color: $navbar-dark-brand-hover-color;
+      color: $navbar-light-brand-hover-color;
     }
   }
 
   .navbar-nav {
     .nav-link {
-      color: $navbar-dark-color;
+      color: $navbar-light-color;
 
       @include hover-focus() {
-        color: $navbar-dark-hover-color;
+        color: $navbar-light-hover-color;
       }
 
       &.disabled {
-        color: $navbar-dark-disabled-color;
+        color: $navbar-light-disabled-color;
       }
     }
 
@@ -246,26 +246,26 @@
     .active > .nav-link,
     .nav-link.show,
     .nav-link.active {
-      color: $navbar-dark-active-color;
+      color: $navbar-light-active-color;
     }
   }
 
   .navbar-toggler {
-    color: $navbar-dark-color;
-    border-color: $navbar-dark-toggler-border-color;
+    color: $navbar-light-color;
+    border-color: $navbar-light-toggler-border-color;
   }
 
   .navbar-toggler-icon {
-    background-image: escape-svg($navbar-dark-toggler-icon-bg);
+    background-image: escape-svg($navbar-light-toggler-icon-bg);
   }
 
   .navbar-text {
-    color: $navbar-dark-color;
+    color: $navbar-light-color;
     a {
-      color: $navbar-dark-active-color;
+      color: $navbar-light-active-color;
 
       @include hover-focus() {
-        color: $navbar-dark-active-color;
+        color: $navbar-light-active-color;
       }
     }
   }
