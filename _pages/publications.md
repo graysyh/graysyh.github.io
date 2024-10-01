@@ -5,16 +5,6 @@ sitemap: false
 permalink: /pub.html
 ---
 
-
----
-title: Publications
-layout: page
-sitemap: false
-permalink: /pub.html
----
-
-
-
 ## In Press
 Fang, X., & Kawakami, K. (in press). Decoding angry and disgusted faces across cultures: Both facial prototype and software matter. Journal of Nonverbal Behavior.
 
