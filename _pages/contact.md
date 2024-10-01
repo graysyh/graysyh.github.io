@@ -2,7 +2,7 @@
 title: Publications
 layout: page
 sitemap: false
-permalink: /pub.html
+permalink: /contact.html
 ---
 
 **Email:** kawakamisocialcoglab@gmail.com
