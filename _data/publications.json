@@ -16,22 +16,20 @@
         "Library Catalog": "PubMed Central"
     },
     {
-  "Item Type": "journalArticle",
+        "Item Type": "journalArticle",
         "Publication Year": 2023.0,
-        "Author": "Kawakami, K; Manakara , K; Fang, X"
+        "Author": "Kawakami, K; Manakara , K; Fang, X",
         "Title": " Impact of face masks on perceptions of black and white targets during the COVID-19 pandemic.",
         "Short Title": "Special issue on \"The Social and Perosnality Psychology of COVID-19. Social and Personality Psychology Compass\"",
         "DOI": "10.1111/spc3.12810",
         "Url": "https://www.kawakamilab.org/publications",
         "Date": "2023-06-02",
-        "Volume": "17",
-        
-    }
-]
-
+        "Volume": "17"
+    },
+    {
   "Item Type": "journalArticle",
         "Publication Year": 2022.0,
-        "Author": "Kawakami, K; Friesen, J; Fang, X" 
+        "Author": "Kawakami, K; Friesen, J; Fang, X",
         "Title": "Perceiving ingroup and outgroup faces wihtin and across nations",
         "Short Title": "Prognostic value of the Residual Cancer Burden index according to breast cancer subtype",
         "Publication Title": "medRxiv",
@@ -40,9 +38,10 @@
         "Date": "2022-03-19",
         "Pages": "1079-1099",
         "Issue": "",
-        "Volume": "113",
+        "Volume": "113"
         
-
+    },
+    {
 
         "Item Type": "journalArticle",
         "Publication Year": 2019.0,
@@ -56,7 +55,7 @@
         "Date": "2019-10-11",
         "Pages": "19008896",
         "Issue": "",
-        "Volume": "",
+        "Volume": ""
         
     }
 ]
