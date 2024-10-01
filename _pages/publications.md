@@ -2,7 +2,7 @@
 title: Publications
 layout: page
 sitemap: false
-permalink: /publications.html
+permalink: /pub.html
 ---
 
 
