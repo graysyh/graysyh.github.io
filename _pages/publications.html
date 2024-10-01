@@ -6,7 +6,7 @@ permalink: /publications/
 ---
 
 <ul class="list-unstyled">
-    {% assign pub_list = site.data.publications | sort: 'publication_year' | group_by: 'publication_year' | reverse %}
+    {% assign pub_list = site.data.publications | sort: 'Publication Year' | group_by: 'Publication Year' | reverse %}
 
     {% for group in pub_list %}
 
@@ -14,24 +14,7 @@ permalink: /publications/
 
         <h3 class="mt-4">{{ year }}</h3>
         {% for publi in group.items %}
-            <li>
-                {% if publi.author %}
-                    <strong>{{ publi.author }}</strong> ({{ publi.publication_year }}). 
-                {% endif %}
-                <em>{{ publi.title }}</em>. 
-                {% if publi.publication_title %}
-                    {{ publi.publication_title }}{% endif %}
-                {% if publi.volume %}
-                    , <strong>{{ publi.volume }}</strong>{% endif %}
-                {% if publi.issue %}
-                    ({{ publi.issue }}){% endif %}
-                {% if publi.pages %}
-                    , {{ publi.pages }}{% endif %}
-                {% if publi.doi %}
-                    . https://doi.org/{{ publi.doi }}{% endif %}
-                {% if publi.url %}
-                    <br><a href="{{ publi.url }}">Link to publication</a>{% endif %}
-            </li>
+            {%- include publication.html -%}
         {% endfor %}
 
     {% endfor %}
