@@ -6,6 +6,14 @@ permalink: /pub.html
 ---
 
 
+---
+title: Publications
+layout: page
+sitemap: false
+permalink: /pub.html
+---
+
+
 
 ## In Press
 Fang, X., & Kawakami, K. (in press). Decoding angry and disgusted faces across cultures: Both facial prototype and software matter. Journal of Nonverbal Behavior.
@@ -21,7 +29,7 @@ Kawakami, K.,Meyers, C., & Friesen, J., (under revision). Impact of true and fal
 Rosenbaum, R. S., Kwan, D., Halilova, J. G., Lenton-Brym, A., Craver, C. F., & Kawakami, K. (under revision). Temporal construal in older adults. Manuscript submitted to Journal of Experimental Psychology: General.
 
 ## 2023
-Karmali, F., & Kawakami, K. (2023). Posing while Black: The impact of race and expansive poses on trait attributions, professional evaluations, and interpersonal relations. Journal of Personality and Social Psychology, 124(1), 49-68.
+Karmali, F., & Kawakami, K. (2023). Posing while Black: [The impact of race and expansive poses on trait attributions, professional evaluations, and interpersonal relations](https://raw.githubusercontent.com/graysyh/graysyh.github.io/main/assets/pdf/Posing+While+Black+The+Impact+of+Race+and+Expansiv+%5Bretrieved_2023-08-29%5D.pdf). Journal of Personality and Social Psychology, 124(1), 49-68.
 
 Kawakami, K., Manokara, K., & Fang, X. (2023). Impact of face masks on perceptions of black and white targets during the COVID-19 pandemic. Special issue on “The Social and Personality Psychology of COVID-19”. Social and Personality Psychology Compass, 17, e12810.
 
