@@ -1,6 +1,6 @@
 ---
 title: Contact Us
-layout: default
+layout: page
 sitemap: false
 permalink: /contact.html
 ---
