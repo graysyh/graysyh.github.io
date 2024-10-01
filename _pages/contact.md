@@ -1,5 +1,5 @@
 ---
-title: Publications
+title: Contact
 layout: page
 sitemap: false
 permalink: /contact.html
