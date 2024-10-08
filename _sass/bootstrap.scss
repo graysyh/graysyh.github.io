@@ -9,14 +9,14 @@ $font-size-base: 16;
 $code-color: #247ba0;
 $theme-colors: (
   // https://coolors.co/app/247ba0-70c1b3-b2dbbf-f3ffbd-ff1654
-  "primary": #008080,
+  "primary": #ff691d,
   "danger": #ff1654
 );
 
 @import "bootstrap/bootstrap";
 
 body {
-  max-width: 1200;
+  max-width: 800px;
   margin: 0 auto;
 }
 
