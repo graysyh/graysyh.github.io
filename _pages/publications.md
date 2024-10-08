@@ -5,9 +5,7 @@ sitemap: false
 permalink: /pub.html
 ---
 
-<span style="color:red">
 ## In Press
-</span>
 Fang, X., & Kawakami, K. (in press). Decoding angry and disgusted faces across cultures: Both facial prototype and software matter. _Journal of Nonverbal Behavior_.
 
 Fang, X., Liu, W., & Kawakami, K. (in press). Cultural differences in evaluating past expressions in dynamic emotions: Easterners show greater assimilation effects than Westerners. _Emotion_.
