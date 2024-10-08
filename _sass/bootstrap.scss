@@ -13,81 +13,43 @@
   background-color: transparent; // Remove background color
   border-bottom: 4px solid #008080; // Teal line under the navbar
   box-shadow: none; // Ensure no shadow obscures the line
+  color: #333; // Set navbar text color to dark gray
 
-  // Because flex properties aren't inherited, we need to redeclare these first
-  // few properties so that content nested within behave properly.
-  %container-flex-properties {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
+  .navbar-brand {
+    color: #333; // Set brand text color to dark gray
+
+    @include hover-focus() {
+      color: #000; // Change to black on hover
+    }
   }
 
-  .container,
-  .container-fluid {
-    @extend %container-flex-properties;
+  .navbar-nav {
+    .nav-link {
+      color: #333; // Set nav link text color to dark gray
+
+      @include hover-focus() {
+        color: #000; // Change to black on hover
+      }
+    }
+
+    .dropdown-menu {
+      position: static;
+      float: none;
+    }
   }
 
-  @each $breakpoint, $container-max-width in $container-max-widths {
-    > .container#{breakpoint-infix($breakpoint, $container-max-widths)} {
-      @extend %container-flex-properties;
+  .navbar-text {
+    color: #333; // Set navbar text to dark gray
+
+    a {
+      color: #000; // Set link text to black
+
+      @include hover-focus() {
+        color: #000; // Keep link black on hover
+      }
     }
   }
 }
-
-
-// Navbar brand
-//
-// Used for brand, project, or site names.
-
-.navbar-brand {
-  display: inline-block;
-  padding-top: $navbar-brand-padding-y;
-  padding-bottom: $navbar-brand-padding-y;
-  margin-right: $navbar-padding-x;
-  @include font-size($navbar-brand-font-size);
-  line-height: inherit;
-  white-space: nowrap;
-
-  @include hover-focus() {
-    text-decoration: none;
-  }
-}
-
-
-// Navbar nav
-//
-// Custom navbar navigation (doesn't require `.nav`, but does make use of `.nav-link`).
-
-.navbar-nav {
-  display: flex;
-  flex-direction: column; // cannot use `inherit` to get the `.navbar`s value
-  padding-left: 0;
-  margin-bottom: 0;
-  list-style: none;
-
-  .nav-link {
-    padding-right: 0;
-    padding-left: 0;
-  }
-
-  .dropdown-menu {
-    position: static;
-    float: none;
-  }
-}
-
-
-// Navbar text
-//
-//
-
-.navbar-text {
-  display: inline-block;
-  padding-top: $nav-link-padding-y;
-  padding-bottom: $nav-link-padding-y;
-}
-
 
 // Responsive navbar
 //
@@ -213,19 +175,19 @@
 // Dark links against a light background
 .navbar-light {
   .navbar-brand {
-    color: $navbar-light-brand-color;
+    color: #333; // Dark text color for the light theme
 
     @include hover-focus() {
-      color: $navbar-light-brand-hover-color;
+      color: #000; // Change to black on hover
     }
   }
 
   .navbar-nav {
     .nav-link {
-      color: $navbar-light-color;
+      color: #333; // Dark text color for the light theme
 
       @include hover-focus() {
-        color: $navbar-light-hover-color;
+        color: #000; // Change to black on hover
       }
 
       &.disabled {
@@ -237,13 +199,13 @@
     .active > .nav-link,
     .nav-link.show,
     .nav-link.active {
-      color: $navbar-light-active-color;
+      color: #333;
     }
   }
 
   .navbar-toggler {
-    color: $navbar-light-color;
-    border-color: $navbar-light-toggler-border-color;
+    color: #333;
+    border-color: #333;
   }
 
   .navbar-toggler-icon {
@@ -251,12 +213,12 @@
   }
 
   .navbar-text {
-    color: $navbar-light-color;
+    color: #333;
     a {
-      color: $navbar-light-active-color;
+      color: #333;
 
       @include hover-focus() {
-        color: $navbar-light-active-color;
+        color: #000;
       }
     }
   }
@@ -265,23 +227,23 @@
 // White links against a dark background
 .navbar-dark {
   .navbar-brand {
-    color: $navbar-dark-brand-color;
+    color: #fff;
 
     @include hover-focus() {
-      color: $navbar-dark-brand-hover-color;
+      color: #ddd;
     }
   }
 
   .navbar-nav {
     .nav-link {
-      color: $navbar-dark-color;
+      color: #fff;
 
       @include hover-focus() {
-        color: $navbar-dark-hover-color;
+        color: #ddd;
       }
 
       &.disabled {
-        color: $navbar-dark-disabled-color;
+        color: #555;
       }
     }
 
@@ -289,13 +251,13 @@
     .active > .nav-link,
     .nav-link.show,
     .nav-link.active {
-      color: $navbar-dark-active-color;
+      color: #fff;
     }
   }
 
   .navbar-toggler {
-    color: $navbar-dark-color;
-    border-color: $navbar-dark-toggler-border-color;
+    color: #fff;
+    border-color: #fff;
   }
 
   .navbar-toggler-icon {
@@ -303,12 +265,12 @@
   }
 
   .navbar-text {
-    color: $navbar-dark-color;
+    color: #fff;
     a {
-      color: $navbar-dark-active-color;
+      color: #fff;
 
       @include hover-focus() {
-        color: $navbar-dark-active-color;
+        color: #ddd;
       }
     }
   }
