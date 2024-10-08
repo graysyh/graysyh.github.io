@@ -6,20 +6,20 @@ permalink: /pub.html
 ---
 
 ## In Press
-Fang, X., & Kawakami, K. (in press). Decoding angry and disgusted faces across cultures: Both facial prototype and software matter. Journal of Nonverbal Behavior.
+Fang, X., & Kawakami, K. (in press). Decoding angry and disgusted faces across cultures: Both facial prototype and software matter. _Journal of Nonverbal Behavior_.
 
-Fang, X., Liu, W., & Kawakami, K. (in press). Cultural differences in evaluating past expressions in dynamic emotions: Easterners show greater assimilation effects than Westerners. Emotion.
+Fang, X., Liu, W., & Kawakami, K. (in press). Cultural differences in evaluating past expressions in dynamic emotions: Easterners show greater assimilation effects than Westerners. _Emotion_.
 
-Andersson, P. A., Vartanova, I., Västfjäll, D., Tinghög, G., Strimling, P., Gelfand, M., Wu, J., Abernathy, J., Akotia, C. S., Aldashev, A., Andrighetto, G., Anum, A., Arikan, G., Aycan, Z., Bagherian, F., Barrera, D., Basnight-Brown, D., Batkeyev, B., … Kawakami, K., … Eriksson, K. (under revision). Anger and disgust shape judgments of social sanctions across cultures, especially in high individual autonomy societies. Manuscript submitted to Nature Scientific Reports.
+Andersson, P. A., Vartanova, I., Västfjäll, D., Tinghög, G., Strimling, P., Gelfand, M., Wu, J., Abernathy, J., Akotia, C. S., Aldashev, A., Andrighetto, G., Anum, A., Arikan, G., Aycan, Z., Bagherian, F., Barrera, D., Basnight-Brown, D., Batkeyev, B., … Kawakami, K., … Eriksson, K. (under revision). Anger and disgust shape judgments of social sanctions across cultures, especially in high individual autonomy societies. Manuscript submitted to _Nature Scientific Reports_.
 
-Fang, X., & Kawakami, K. (under revision). Changing perceptions of people wearing masks: Two years in the life of a pandemic. Manuscript submitted to European Journal of Social Psychology.
+Fang, X., & Kawakami, K. (under revision). Changing perceptions of people wearing masks: Two years in the life of a pandemic. Manuscript submitted to _European Journal of Social Psychology_.
 
-Kawakami, K.,Meyers, C., & Friesen, J., (under revision). Impact of true and false smiles on perceived trustworthiness of Black and White faces: A Black Perspective. Manuscript submitted to Journal of Experimental Psychology: General.
+Kawakami, K.,Meyers, C., & Friesen, J., (under revision). Impact of true and false smiles on perceived trustworthiness of Black and White faces: A Black Perspective. Manuscript submitted to _Journal of Experimental Psychology_: General.
 
-Rosenbaum, R. S., Kwan, D., Halilova, J. G., Lenton-Brym, A., Craver, C. F., & Kawakami, K. (under revision). Temporal construal in older adults. Manuscript submitted to Journal of Experimental Psychology: General.
+Rosenbaum, R. S., Kwan, D., Halilova, J. G., Lenton-Brym, A., Craver, C. F., & Kawakami, K. (under revision). Temporal construal in older adults. Manuscript submitted to _Journal of Experimental Psychology: General_.
 
 ## 2023
-Karmali, F., & Kawakami, K. (2023). Posing while Black: [The impact of race and expansive poses on trait attributions, professional evaluations, and interpersonal relations](https://raw.githubusercontent.com/graysyh/graysyh.github.io/main/assets/pdf/Posing+While+Black+The+Impact+of+Race+and+Expansiv+%5Bretrieved_2023-08-29%5D.pdf). Journal of Personality and Social Psychology, 124(1), 49-68.
+Karmali, F., & Kawakami, K. (2023). Posing while Black: [The impact of race and expansive poses on trait attributions, professional evaluations, and interpersonal relations](https://raw.githubusercontent.com/graysyh/graysyh.github.io/main/assets/pdf/Posing+While+Black+The+Impact+of+Race+and+Expansiv+%5Bretrieved_2023-08-29%5D.pdf). _Journal of Personality and Social Psychology_, 124(1), 49-68.
 
 Kawakami, K., Manokara, K., & Fang, X. (2023). Impact of face masks on perceptions of black and white targets during the COVID-19 pandemic. Special issue on “The Social and Personality Psychology of COVID-19”. Social and Personality Psychology Compass, 17, e12810.
 
