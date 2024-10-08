@@ -21,7 +21,7 @@
   flex-wrap: wrap; // allow us to do the line break for collapsing content
   align-items: center;
   justify-content: space-between; // space out brand from logo
-  padding: 0 !important;
+  padding: $navbar-padding-y $navbar-padding-x;
   background-color: #008080;
 
   // Because flex properties aren't inherited, we need to redeclare these first
@@ -34,11 +34,9 @@
   }
 
   .container,
-.container-fluid {
-    width: 100%;
-    padding: 0;
-    margin: 0;
-}
+  .container-fluid {
+    @extend %container-flex-properties;
+  }
 
   @each $breakpoint, $container-max-width in $container-max-widths {
     > .container#{breakpoint-infix($breakpoint, $container-max-widths)} {
