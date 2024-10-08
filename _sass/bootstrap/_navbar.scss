@@ -35,7 +35,8 @@
 
   .container,
   .container-fluid {
-    @extend %container-flex-properties;
+    padding: 0 !important;
+    margin: 0 !important;\
   }
 
   @each $breakpoint, $container-max-width in $container-max-widths {
