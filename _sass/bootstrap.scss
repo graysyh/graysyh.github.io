@@ -13,22 +13,26 @@
   background-color: transparent; // Remove background color
   border-bottom: 4px solid #008080; // Teal line under the navbar
   box-shadow: none; // Ensure no shadow obscures the line
-  color: #333; // Set navbar text color to dark gray
+
+  // Ensure text color is enforced in the navbar
+  * {
+    color: #333 !important; // Force dark text color
+  }
 
   .navbar-brand {
-    color: #333; // Set brand text color to dark gray
+    color: #333 !important; // Ensure brand text is dark gray
 
     @include hover-focus() {
-      color: #000; // Change to black on hover
+      color: #000 !important; // Ensure black on hover
     }
   }
 
   .navbar-nav {
     .nav-link {
-      color: #333; // Set nav link text color to dark gray
+      color: #333 !important; // Ensure nav link text is dark gray
 
       @include hover-focus() {
-        color: #000; // Change to black on hover
+        color: #000 !important; // Ensure black on hover
       }
     }
 
@@ -39,13 +43,13 @@
   }
 
   .navbar-text {
-    color: #333; // Set navbar text to dark gray
+    color: #333 !important; // Ensure navbar text is dark gray
 
     a {
-      color: #000; // Set link text to black
+      color: #000 !important; // Ensure link text is black
 
       @include hover-focus() {
-        color: #000; // Keep link black on hover
+        color: #000 !important; // Ensure black on hover
       }
     }
   }
@@ -175,19 +179,19 @@
 // Dark links against a light background
 .navbar-light {
   .navbar-brand {
-    color: #333; // Dark text color for the light theme
+    color: #333 !important; // Ensure brand text is dark gray
 
     @include hover-focus() {
-      color: #000; // Change to black on hover
+      color: #000 !important; // Ensure black on hover
     }
   }
 
   .navbar-nav {
     .nav-link {
-      color: #333; // Dark text color for the light theme
+      color: #333 !important; // Ensure nav link text is dark gray
 
       @include hover-focus() {
-        color: #000; // Change to black on hover
+        color: #000 !important; // Ensure black on hover
       }
 
       &.disabled {
@@ -199,13 +203,13 @@
     .active > .nav-link,
     .nav-link.show,
     .nav-link.active {
-      color: #333;
+      color: #333 !important;
     }
   }
 
   .navbar-toggler {
-    color: #333;
-    border-color: #333;
+    color: #333 !important;
+    border-color: #333 !important;
   }
 
   .navbar-toggler-icon {
@@ -213,12 +217,12 @@
   }
 
   .navbar-text {
-    color: #333;
+    color: #333 !important;
     a {
-      color: #333;
+      color: #333 !important;
 
       @include hover-focus() {
-        color: #000;
+        color: #000 !important;
       }
     }
   }
@@ -227,19 +231,19 @@
 // White links against a dark background
 .navbar-dark {
   .navbar-brand {
-    color: #fff;
+    color: #fff !important;
 
     @include hover-focus() {
-      color: #ddd;
+      color: #ddd !important;
     }
   }
 
   .navbar-nav {
     .nav-link {
-      color: #fff;
+      color: #fff !important;
 
       @include hover-focus() {
-        color: #ddd;
+        color: #ddd !important;
       }
 
       &.disabled {
@@ -251,13 +255,13 @@
     .active > .nav-link,
     .nav-link.show,
     .nav-link.active {
-      color: #fff;
+      color: #fff !important;
     }
   }
 
   .navbar-toggler {
-    color: #fff;
-    border-color: #fff;
+    color: #fff !important;
+    border-color: #fff !important;
   }
 
   .navbar-toggler-icon {
@@ -265,12 +269,12 @@
   }
 
   .navbar-text {
-    color: #fff;
+    color: #fff !important;
     a {
-      color: #fff;
+      color: #fff !important;
 
       @include hover-focus() {
-        color: #ddd;
+        color: #ddd !important;
       }
     }
   }
