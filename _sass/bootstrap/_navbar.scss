@@ -25,6 +25,11 @@
   padding: $navbar-padding-y $navbar-padding-x;
   border-bottom: 2px solid #008080; // Teal line under the navbar
 
+    &:hover,
+  &:focus {
+    color: #006666 !important; // Slightly darker teal on hover/focus
+  }
+
   // Because flex properties aren't inherited, we need to redeclare these first
   // few properties so that content nested within behave properly.
   %container-flex-properties {
