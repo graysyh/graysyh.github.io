@@ -1,33 +1,45 @@
-@if $enable-grid-classes {
-  // Single container class with breakpoint max-widths
-  .container {
-    @include make-container();
-    @include make-container-max-widths();
-  }
+<header class="site-header" role="banner">
 
-  // 100% wide container at all breakpoints
-  .container-fluid {
-    @include make-container();
-  }
+	<nav class="navbar navbar-expand-sm navbar-dark px-0">
+		
+		<!-- Full-width container-fluid -->
+		<div class="container-fluid">
+			<!-- Navbar brand -->
+			<a class="navbar-brand" href="/">{{ site.title }}</a>
 
-  // Responsive containers that are 100% wide until a breakpoint
-  @each $breakpoint, $container-max-width in $container-max-widths {
-    .container-#{$breakpoint} {
-      @extend .container-fluid;
-    }
+			<!-- Navbar toggler button -->
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
+				aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
 
-    @include media-breakpoint-up($breakpoint, $grid-breakpoints) {
-      %responsive-container-#{$breakpoint} {
-        max-width: $container-max-width;
-      }
+			<!-- Navbar links -->
+			<div class="collapse navbar-collapse" id="navbarToggler">
+				<ul class="navbar-nav mr-auto">
+					<li>
+						<a class="nav-link" href="/pub">Publications</a>
+					</li>
+					
+					<li>
+						<a class="nav-link" href="/team">People</a>
+					</li>
 
-      @each $name, $width in $grid-breakpoints {
-        @if ($container-max-width > $width or $breakpoint == $name) {
-          .container#{breakpoint-infix($name, $grid-breakpoints)} {
-            @extend %responsive-container-#{$breakpoint};
-          }
-        }
-      }
-    }
-  }
-} 
+					<li>
+						<a class="nav-link" href="/courses">Courses</a>
+					</li>
+
+					<li>
+						<a class="nav-link" href="/join">Join the Lab</a>
+					</li>
+
+					<li>
+						<a class="nav-link" href="/contact">Contact</a>
+					</li>
+				
+				</ul>
+			</div>
+		</div>
+
+	</nav>
+
+</header> 
