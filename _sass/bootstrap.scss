@@ -1,281 +1,40 @@
-// Navbar
-//
-// Provide a static navbar from which we expand to create full-width, fixed, and
-// other navbar variations.
+@charset "utf-8";
 
-.navbar {
-  position: relative;
-  display: flex;
-  flex-wrap: wrap; // allow us to do the line break for collapsing content
-  align-items: center;
-  justify-content: space-between; // space out brand from logo
-  padding: $navbar-padding-y $navbar-padding-x;
-  background-color: transparent; // Remove background color
-  border-bottom: 4px solid #008080; // Teal line under the navbar
-  box-shadow: none; // Ensure no shadow obscures the line
+$font-family-sans-serif: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+  sans-serif !default;
+$font-family-serif: Georgia, "Times New Roman", Times, serif !default;
+$font-family-monospace: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-base: $font-family-sans-serif !default;
+$font-size-base: 16;
+$code-color: #247ba0;
+$theme-colors: (
+  // https://coolors.co/app/247ba0-70c1b3-b2dbbf-f3ffbd-ff1654
+  "primary": #008080,
+  "danger": #ff1654
+);
 
-  // Ensure text color is enforced in the navbar
-  * {
-    color: #333 !important; // Force dark text color
-  }
+@import "bootstrap/bootstrap";
 
-  .navbar-brand {
-    color: #333 !important; // Ensure brand text is dark gray
-
-    @include hover-focus() {
-      color: #000 !important; // Ensure black on hover
-    }
-  }
-
-  .navbar-nav {
-    .nav-link {
-      color: #333 !important; // Ensure nav link text is dark gray
-
-      @include hover-focus() {
-        color: #000 !important; // Ensure black on hover
-      }
-    }
-
-    .dropdown-menu {
-      position: static;
-      float: none;
-    }
-  }
-
-  .navbar-text {
-    color: #333 !important; // Ensure navbar text is dark gray
-
-    a {
-      color: #000 !important; // Ensure link text is black
-
-      @include hover-focus() {
-        color: #000 !important; // Ensure black on hover
-      }
-    }
-  }
+body {
+  max-width: 1100;
+  margin: 0 auto;
 }
 
-// Responsive navbar
-//
-// Custom styles for responsive collapsing and toggling of navbar contents.
-// Powered by the collapse Bootstrap JavaScript plugin.
-
-// When collapsed, prevent the toggleable navbar contents from appearing in
-// the default flexbox row orientation. Requires the use of `flex-wrap: wrap`
-// on the `.navbar` parent.
-.navbar-collapse {
-  flex-basis: 100%;
-  flex-grow: 1;
-  // For always expanded or extra full navbars, ensure content aligns itself
-  // properly vertically. Can be easily overridden with flex utilities.
-  align-items: center;
+p {
+  text-align: justify;
 }
 
-// Button for toggling the navbar when in its collapsed state
-.navbar-toggler {
-  padding: $navbar-toggler-padding-y $navbar-toggler-padding-x;
-  @include font-size($navbar-toggler-font-size);
-  line-height: 1;
-  background-color: transparent; // remove default button style
-  border: $border-width solid transparent; // remove default button style
-  @include border-radius($navbar-toggler-border-radius);
-
-  @include hover-focus() {
-    text-decoration: none;
-  }
+.site-footer {
+  border-top: 2px solid $light;
 }
 
-// Keep as a separate element so folks can easily override it with another icon
-// or image file as needed.
-.navbar-toggler-icon {
-  display: inline-block;
-  width: 1.5em;
-  height: 1.5em;
-  vertical-align: middle;
-  content: "";
-  background: no-repeat center center;
-  background-size: 100% 100%;
+.site-header {
+  border-bottom: 2px solid $light;
 }
 
-// Generate series of `.navbar-expand-*` responsive classes for configuring
-// where your navbar collapses.
-.navbar-expand {
-  @each $breakpoint in map-keys($grid-breakpoints) {
-    $next: breakpoint-next($breakpoint, $grid-breakpoints);
-    $infix: breakpoint-infix($next, $grid-breakpoints);
-
-    &#{$infix} {
-      @include media-breakpoint-down($breakpoint) {
-        %container-navbar-expand-#{$breakpoint} {
-          padding-right: 0;
-          padding-left: 0;
-        }
-
-        > .container,
-        > .container-fluid {
-          @extend %container-navbar-expand-#{$breakpoint};
-        }
-
-        @each $size, $container-max-width in $container-max-widths {
-          > .container#{breakpoint-infix($size, $container-max-widths)} {
-            @extend %container-navbar-expand-#{$breakpoint};
-          }
-        }
-      }
-
-      @include media-breakpoint-up($next) {
-        flex-flow: row nowrap;
-        justify-content: flex-start;
-
-        .navbar-nav {
-          flex-direction: row;
-
-          .dropdown-menu {
-            position: absolute;
-          }
-
-          .nav-link {
-            padding-right: $navbar-nav-link-padding-x;
-            padding-left: $navbar-nav-link-padding-x;
-          }
-        }
-
-        // For nesting containers, have to redeclare for alignment purposes
-        %container-nesting-#{$breakpoint} {
-          flex-wrap: nowrap;
-        }
-
-        > .container,
-        > .container-fluid {
-          @extend %container-nesting-#{$breakpoint};
-        }
-
-        @each $size, $container-max-width in $container-max-widths {
-          > .container#{breakpoint-infix($size, $container-max-widths)} {
-            @extend %container-nesting-#{$breakpoint};
-          }
-        }
-
-        .navbar-collapse {
-          display: flex !important; // stylelint-disable-line declaration-no-important
-
-          // Changes flex-bases to auto because of an IE10 bug
-          flex-basis: auto;
-        }
-
-        .navbar-toggler {
-          display: none;
-        }
-      }
-    }
-  }
-}
-
-
-// Navbar themes
-//
-// Styles for switching between navbars with light or dark background.
-
-// Dark links against a light background
-.navbar-light {
-  .navbar-brand {
-    color: #333 !important; // Ensure brand text is dark gray
-
-    @include hover-focus() {
-      color: #000 !important; // Ensure black on hover
-    }
-  }
-
-  .navbar-nav {
-    .nav-link {
-      color: #333 !important; // Ensure nav link text is dark gray
-
-      @include hover-focus() {
-        color: #000 !important; // Ensure black on hover
-      }
-
-      &.disabled {
-        color: $navbar-light-disabled-color;
-      }
-    }
-
-    .show > .nav-link,
-    .active > .nav-link,
-    .nav-link.show,
-    .nav-link.active {
-      color: #333 !important;
-    }
-  }
-
-  .navbar-toggler {
-    color: #333 !important;
-    border-color: #333 !important;
-  }
-
-  .navbar-toggler-icon {
-    background-image: escape-svg($navbar-light-toggler-icon-bg);
-  }
-
-  .navbar-text {
-    color: #333 !important;
-    a {
-      color: #333 !important;
-
-      @include hover-focus() {
-        color: #000 !important;
-      }
-    }
-  }
-}
-
-// White links against a dark background
-.navbar-dark {
-  .navbar-brand {
-    color: #fff !important;
-
-    @include hover-focus() {
-      color: #ddd !important;
-    }
-  }
-
-  .navbar-nav {
-    .nav-link {
-      color: #fff !important;
-
-      @include hover-focus() {
-        color: #ddd !important;
-      }
-
-      &.disabled {
-        color: #555;
-      }
-    }
-
-    .show > .nav-link,
-    .active > .nav-link,
-    .nav-link.show,
-    .nav-link.active {
-      color: #fff !important;
-    }
-  }
-
-  .navbar-toggler {
-    color: #fff !important;
-    border-color: #fff !important;
-  }
-
-  .navbar-toggler-icon {
-    background-image: escape-svg($navbar-dark-toggler-icon-bg);
-  }
-
-  .navbar-text {
-    color: #fff !important;
-    a {
-      color: #fff !important;
-
-      @include hover-focus() {
-        color: #ddd !important;
-      }
-    }
-  }
+.img-cover {
+  max-height: 250px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
 }
