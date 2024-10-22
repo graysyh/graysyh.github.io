@@ -1,6 +1,6 @@
 ---
 layout: member
 category: RA
-title: Vi Vo
-image: vi.jpg
+title: Rida Ikram
+image: rida.jpg
 ---
