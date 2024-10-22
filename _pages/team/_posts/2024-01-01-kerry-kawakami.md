@@ -2,7 +2,7 @@
 layout: member
 category: PI
 title: 'Kerry Kawakami'
-image: 'fabien.jpg'
+image: 'kerry.jpg'
 role: Principal Investigator
 email: kawakami@yorku.ca
 social:
