@@ -1,12 +1,27 @@
 <li class="media mb-5">
-    <img class="align-self-center mr-3"
-         src="/assets/images/team/{{ member.image }}"
-         style="max-width: 100px; filter: grayscale(100%); border-radius: 50%;"
-         alt="{{member.title}}">
+    {% if member.category == 'PI' or member.category == 'gradstudent' or member.category == 'postdoc' %}
+        <!-- Larger Image for PI, Graduate Students, and Postdocs -->
+        <img class="align-self-center mr-3"
+             src="/assets/images/team/{{ member.image }}"
+             style="max-width: 150px; filter: grayscale(100%); border-radius: 50%;"
+             alt="{{ member.title }}">
 
-    <div class="media-body">
-      <h5 class="mt-0">{{ member.title }}</h5>
-      <p>{{member.role}}</p>
-      {%- include team_member_social.html -%}
-    </div>
+        <div class="media-body">
+          <h5 class="mt-0" style="font-size: 1.5rem;">{{ member.title }}</h5>
+          <p style="font-size: 1.2rem;">{{ member.role }}</p>
+          {%- include team_member_social.html -%}
+        </div>
+    {% else %}
+        <!-- Smaller Image for Other Members -->
+        <img class="align-self-center mr-3"
+             src="/assets/images/team/{{ member.image }}"
+             style="max-width: 100px; filter: grayscale(100%); border-radius: 50%;"
+             alt="{{ member.title }}">
+
+        <div class="media-body">
+          <h5 class="mt-0">{{ member.title }}</h5>
+          <p>{{ member.role }}</p>
+          {%- include team_member_social.html -%}
+        </div>
+    {% endif %}
 </li>
