@@ -2,5 +2,5 @@
 layout: member
 category: RA
 title: Vi Vo
-image: elise.jpg
+image: vi.jpg
 ---
