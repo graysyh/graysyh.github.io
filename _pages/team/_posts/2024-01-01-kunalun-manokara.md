@@ -1,5 +1,6 @@
 ---
 layout: member
+category: affiliated
 title: Kunalan Manokara
 image: elise.jpg
 social:
