@@ -5,7 +5,7 @@ permalink: /team/
 ---
 
 <!-- PI -->
-<h2 class="mb-3"><a id="staff"></a>Principal Investigator</h2>
+<h2 class="mb-3"><a id="PI"></a>Principal Investigator</h2>
 
 {% assign members = site.posts | where: 'category', 'PI' | sort: 'date' %}
 <ul class="list-unstyled">
@@ -23,10 +23,10 @@ permalink: /team/
 </div>
 </ul>
 
-<!-- Staff -->
-<h2 class="mb-3"><a id="staff"></a>Staff</h2>
+<!-- Graduate Students -->
+<h2 class="mb-3"><a id="gradstudent"></a>Graduate Students</h2>
 
-{% assign members = site.posts | where: 'category', 'staff' | sort: 'date' %}
+{% assign members = site.posts | where: 'category', 'gradstudent' | sort: 'date' %}
 <ul class="list-unstyled">
 <div class="row">
 {% for member in members%}
