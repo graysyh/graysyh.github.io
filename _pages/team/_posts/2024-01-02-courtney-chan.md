@@ -3,7 +3,7 @@ layout: member
 category: gradstudent
 title: Courtney Chan
 image: courtney.jpg
-role: PhD Student
+role: PhD Candidate
 email: chanco@yorku.ca
 social:
   website:
