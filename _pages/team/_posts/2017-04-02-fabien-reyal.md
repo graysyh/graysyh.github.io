@@ -3,8 +3,7 @@ layout: member
 category: staff
 title: 'Fabien Reyal'
 image: 'fabien.jpg'
-role: Lab director
-permalink: 'team/fabien-reyal'
+role: Principal Investigator
 social:
     twitter: https://twitter.com/fabienreyal
     linkedin: https://linkedin.com/in/fabienreyal
