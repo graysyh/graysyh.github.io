@@ -2,7 +2,7 @@
 layout: member
 category: gradstudent
 title: Hannah Tran
-image: dorian.jpeg
+image: hannah.jpg
 role: PhD Student
 permalink: 'team/dorian-bondu'
 email: tranhan@yorku.ca
