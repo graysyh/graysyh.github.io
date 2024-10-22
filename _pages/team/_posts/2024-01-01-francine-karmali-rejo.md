@@ -2,7 +2,7 @@
 layout: member
 category: affiliated
 title: Francine Karmali
-image: beatriz.jpg
+image: francine.jpg
 role: 'Affiliation: University of Toronto'
 social:
     website: https://francinekarmali.com/
