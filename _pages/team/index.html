@@ -61,10 +61,10 @@ permalink: /team/
 </div>
 </ul>
 
-<!-- Researchers -->
-<h2 class="mb-3"><a id="researcher"></a>Researchers</h2>
+<!-- Affiliated Members -->
+<h2 class="mb-3"><a id="affiliated"></a>Affiliated Members</h2>
 
-{% assign members = site.posts | where: 'category', 'postdoc' | sort: 'date' %}
+{% assign members = site.posts | where: 'category', 'affiliated' | sort: 'date' %}
 <ul class="list-unstyled">
 <div class="row">
 {% for member in members%}
