@@ -2,7 +2,7 @@
 layout: member
 category: postdoc
 title: Corey Petsnik
-image: lidia.jpg
+image: corey.jpg
 role: Postdoctoral Fellow
 email: cpetsnik@yorku.ca
 social:
