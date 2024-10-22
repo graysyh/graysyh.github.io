@@ -15,6 +15,16 @@ $theme-colors: (
 
 @import "bootstrap/bootstrap";
 
+.section-large {
+    font-size: 1.8rem; /* Increase font size */
+    margin-top: 2rem;  /* Add extra space before the section */
+    padding-bottom: 1rem; /* Adjust padding for better spacing */
+}
+
+h2 {
+    font-size: 1.4rem; /* Default font size for other sections */
+}
+
 body {
   max-width: 1200px;
   margin: 0 auto;
